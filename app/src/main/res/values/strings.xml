@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Express</string>
+
+    <string name="splash_first_page_title">first_page</string>
+    <string name="splash_first_page_desc">first_desc</string>
+    <string name="splash_second_page_title">second_page</string>
+    <string name="splash_second_page_desc">second_desc</string>
+    <string name="splash_third_page_title">third_page</string>
+    <string name="splash_third_page_desc">third_desc</string>
+
+    <string name="splash_go_to_mainActivity">前往体验</string>
+</resources>

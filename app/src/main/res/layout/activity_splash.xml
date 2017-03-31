@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/splash_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+    
+
+
+    <ImageButton
+        android:id="@+id/splash_pre_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pre_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/splash_indicator_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        >
+        <ImageView
+            android:id="@+id/splash_indicator_first"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/ic_indicator_selected"/>
+        <ImageView
+            android:id="@+id/splash_indicator_second"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/ic_indicator_unselected"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
+        <ImageView
+            android:id="@+id/splash_indicator_third"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/ic_indicator_unselected"/>
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/splash_next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_next_btn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/splash_sure_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/splash_indicator_container"
+        android:text="@string/splash_go_to_mainActivity"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/splash_sure_button_margin"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>
