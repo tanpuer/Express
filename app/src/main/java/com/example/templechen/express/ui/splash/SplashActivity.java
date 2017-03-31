@@ -94,8 +94,13 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
         }
         if (position == indicators.length -1){
             goToMainActivityButton.setVisibility(View.VISIBLE);
+            nextButton.setVisibility(View.GONE);
+        } else if (position == 0) {
+            preButton.setVisibility(View.GONE);
         }else {
             goToMainActivityButton.setVisibility(View.GONE);
+            nextButton.setVisibility(View.INVISIBLE);
+            preButton.setVisibility(View.INVISIBLE);
         }
     }
 
