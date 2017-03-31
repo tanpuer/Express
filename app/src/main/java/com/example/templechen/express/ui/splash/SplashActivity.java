@@ -3,7 +3,6 @@ package com.example.templechen.express.ui.splash;
 import android.animation.ArgbEvaluator;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
@@ -15,7 +14,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import com.example.templechen.express.MainActivity;
+import com.example.templechen.express.ui.main.MainActivity;
 import com.example.templechen.express.R;
 import com.example.templechen.express.util.SettingUtil;
 
@@ -121,10 +120,11 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
                 viewPager.setCurrentItem(currentIndex, true);
                 break;
             case R.id.splash_sure_btn:
-                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
-                SharedPreferences.Editor editor = sp.edit();
-                editor.putBoolean(SettingUtil.FIRST_LAUCH, false);
-                editor.apply();
+                //暂时先取消，每次都显示splash
+//                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+//                SharedPreferences.Editor editor = sp.edit();
+//                editor.putBoolean(SettingUtil.FIRST_LAUCH, false);
+//                editor.apply();
                 goToMainActivity();
             default:
                 break;
