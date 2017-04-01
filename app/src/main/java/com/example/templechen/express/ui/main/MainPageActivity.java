@@ -157,4 +157,13 @@ public class MainPageActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    //difference between setWindowAnimations and overridePendingTransition
+    //setWindowAnimations: only enterAnim
+    //overridePendingTransition: enterAnim and exitAnim
+
+    @Override
+    public void overridePendingTransition(int enterAnim, int exitAnim) {
+        super.overridePendingTransition(enterAnim, exitAnim);
+    }
 }
