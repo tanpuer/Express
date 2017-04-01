@@ -58,7 +58,7 @@ public class MainPageActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navigation);
-
+        setBottomNavClickListener();
         setNightMode();
     }
 
@@ -169,5 +169,26 @@ public class MainPageActivity extends AppCompatActivity
     @Override
     public void overridePendingTransition(int enterAnim, int exitAnim) {
         super.overridePendingTransition(enterAnim, exitAnim);
+    }
+
+    private void setBottomNavClickListener() {
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int itemId =item.getItemId();
+                Log.d(TAG, "onNavigationItemSelected: " + itemId);
+                switch (itemId){
+                    case R.id.nav_scan:
+                        break;
+                    case R.id.nav_detail:
+                        break;
+                    case R.id.nav_other:
+                        break;
+                    default:
+                        break;
+                }
+                return true;
+            }
+        });
     }
 }
