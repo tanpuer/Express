@@ -7,4 +7,6 @@ package com.example.templechen.express.util;
 public class SettingUtil {
 
     public static final String FIRST_LAUCH = "first lauch";
+
+    public static final String NIGHT_MODE = "night_mode";
 }

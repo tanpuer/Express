@@ -14,8 +14,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import com.example.templechen.express.ui.main.MainActivity;
 import com.example.templechen.express.R;
+import com.example.templechen.express.ui.main.MainPageActivity;
 import com.example.templechen.express.util.SettingUtil;
 
 /**
@@ -99,8 +99,8 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
             preButton.setVisibility(View.GONE);
         }else {
             goToMainActivityButton.setVisibility(View.GONE);
-            nextButton.setVisibility(View.INVISIBLE);
-            preButton.setVisibility(View.INVISIBLE);
+            nextButton.setVisibility(View.VISIBLE);
+            preButton.setVisibility(View.VISIBLE);
         }
     }
 
@@ -126,10 +126,10 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.splash_sure_btn:
                 //暂时先取消，每次都显示splash
-//                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
-//                SharedPreferences.Editor editor = sp.edit();
-//                editor.putBoolean(SettingUtil.FIRST_LAUCH, false);
-//                editor.apply();
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+                SharedPreferences.Editor editor = sp.edit();
+                editor.putBoolean(SettingUtil.FIRST_LAUCH, false);
+                editor.apply();
                 goToMainActivity();
             default:
                 break;
@@ -137,7 +137,7 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void goToMainActivity(){
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(this, MainPageActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
         finish();
