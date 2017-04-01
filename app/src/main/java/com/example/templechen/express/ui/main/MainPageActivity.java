@@ -33,6 +33,8 @@ public class MainPageActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("MainPageActivity");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorBottomBarBackground));
         setSupportActionBar(toolbar);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -125,7 +127,7 @@ public class MainPageActivity extends AppCompatActivity
 
                 @Override
                 public void onDrawerClosed(View drawerView) {
-                    //在这里处理日夜模式切换,此Activity theme须继承Theme.AppCompat.DayNight
+                    // 准备两套colors即可
                     SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(MainPageActivity.this);
                     if ((getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES){
                         sp.edit().putBoolean(SettingUtil.NIGHT_MODE, false).apply();
